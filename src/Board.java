@@ -1,13 +1,19 @@
 public class Board {
-    {
-        private Room [] [] map;
-        {
-            public board (Room [] [] map){
+    
+        private Room [] [] map; //field//
+            public Board (Room [][] map){
                 this.map = map;
         }
+
+    public void print() {
+        String row = "";
+        for (int i = 0; i < map.length; i++){
+            row = ""
+        for (int j = 0; j < map.length; j++) {
+            row = map[i][j].toString();
         }
-    }
-    for (int i = 0; i  = 0; i < this.map.length; i++){
-        for (int j )
+            System.out.println(row);
+
     }
 }
+
