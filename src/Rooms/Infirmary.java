@@ -1,4 +1,4 @@
 package Rooms;
 
-public class Infirmary {
+public class Infirmary extends Room;{
 }
