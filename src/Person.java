@@ -1,5 +1,8 @@
 package People;
 
+/**
+ * Person represents the player as they move through the game.
+ */
 public class Person {
     String firstName;
     String familyName;
