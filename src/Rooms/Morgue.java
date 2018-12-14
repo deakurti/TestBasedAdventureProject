@@ -1,8 +1,36 @@
 package Rooms;
 
-public class Morgue extends Room {
-    x.setxLoc(this.xLoc);
-    x.setyLoc(this.yLoc);
-    System.out.println("You died before being able to reach America. Better luck next time.");
-    Runner.gameOff();
+import People.Person;
+
+public class Morgue {
+    Person occupant;
+    int xLoc,yLoc;
+
+    public Morgue(int x, int y)
+    {
+        xLoc = x;
+        yLoc = y;
+    }
+
+    /**
+     * Method controls the results when a person enters this room.
+     * @param x the Person entering
+     */
+    public void enterRoom(Person x)
+    {
+        System.out.println("You enter a plain old room");
+        occupant = x;
+        x.setxLoc(this.xLoc);
+        x.setyLoc(this.yLoc);
+    }
+
+    /**
+     * Removes the player from the room.
+     * @param x
+     */
+    public void leaveRoom(Person x)
+    {
+        occupant = null;
+    }
+
 }
