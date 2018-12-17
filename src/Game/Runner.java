@@ -14,6 +14,7 @@ public class Runner {
     {
         Room[][] building = new Room[5][5];
 
+
         //Fill the building with normal rooms
         for (int x = 0; x<building.length; x++)
         {
@@ -31,7 +32,6 @@ public class Runner {
             x = (int) (Math.random() * building.length);
             y = (int) (Math.random() * building.length);
         }
-
 
         //Setup player 1 and the input scanner
         Person player1 = new Person("FirstName", "FamilyName", 0,0);

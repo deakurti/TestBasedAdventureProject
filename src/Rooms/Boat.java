@@ -3,14 +3,13 @@ package Rooms;
 import People.Person;
 
 
-public class Room {
+public class Boat extends Room {
     Person occupant;
     int xLoc,yLoc;
 
-    public Room(int x, int y)
+    public Boat(int x, int y)
     {
-        xLoc = x;
-        yLoc = y;
+       super(x,y); //inherintig x,y from room class//
     }
 
     /**
@@ -19,10 +18,11 @@ public class Room {
      */
     public void enterRoom(Person x)
     {
-        System.out.println("You enter a plain old room");
+        System.out.println("You enter a boat.");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
+
     }
 
     /**
