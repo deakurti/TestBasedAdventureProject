@@ -23,9 +23,9 @@ public class Person<print> {
         this.yLoc = yLoc;
     }
     public String getFirstName() {return firstName;}
-    public String[] getInventory() { return inventory; }
+    public static String[] getInventory() { return inventory; }
     public int getHealthlevel() {return healthlevel;}
-    public Person (String firstName, int xLoc, int yLoc, int healthlevel)
+    public Person(String firstName, int i, int loc, int xLoc, int yLoc, int healthlevel)
     {
         this.firstName = firstName;
         this.xLoc = xLoc;

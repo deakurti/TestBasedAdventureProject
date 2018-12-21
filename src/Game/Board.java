@@ -2,10 +2,7 @@ package Game;
 
 import Rooms.Room;
 import Rooms.America;
-import Rooms.Boat;
 import Rooms.Infirmary;
-import Rooms.Morgue;
-import Rooms.Sea;
 
 
 public class Board {
@@ -41,7 +38,8 @@ public class Board {
         }
         map[i][j] = new America (i,j);
 
-        public void print() {
+        public void print();
+    {
             String printstr = " ";
             for(int i = 0 ; i < map.length; i++)
             {

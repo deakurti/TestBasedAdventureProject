@@ -1,15 +1,14 @@
 package Game;
 
 import People.Person;
-import Rooms.America;
-import Rooms.Boat;
-import Rooms.Infirmary;
 import Rooms.Room;
 import java.util.Scanner;
 
 public class Runner {
 
     private static boolean gameOn = true;
+    private static Room[][] building;
+
     public static void main(String[] args)
     {
         Room[][] map = new Room[5][5];
@@ -21,7 +20,7 @@ public class Runner {
         System.out.println("What is your name?");
         String name = in.nextLine();
         Person player = new Person(name, 0, 0,100,0,1);
-        System.out.println("Welcome " + player.getName()+".");
+        System.out.println("Welcome " + player.getFirstName()+".");
         String height = in.nextLine();
         String width = in.nextLine();
         System.out.println("You will travel from the boat until you get to either America or the infirmary. Good luck! ");
@@ -38,7 +37,7 @@ public class Runner {
         }
 
         //Setup player 1 and the input scanner
-        Person player = new Person("FirstName", "FamilyName", 0,0);
+        Person player = new Person("FirstName", 0, 0,0, 0,0);
         building[0][0].enterRoom(player);
         Scanner in = new Scanner(System.in);
         while(gameOn)

@@ -35,24 +35,22 @@ public class America extends Room
             if(x.getInventory()[i] != null && x.getInventory()[i].equals("Done!")) {
                 System.out.println("Congratulations! You got into America!!");
                 Runner.gameOff();
-                break;
             }
             else if(i == x.getInventory().length-1){
-                System.out.println("Oh no!!");
+                System.out.println("Oh no!! You lost. Try again. ");
             }
         }
 
 
     }
-
     @Override
     public void leaveRoom(Person x) {
-        super.leaveRoom(x);
         occupant = null;
         inside = false;
+        super.leaveRoom(x);
     }
 }
-    }
-}
+
+
 
 
