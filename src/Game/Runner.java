@@ -1,18 +1,31 @@
-
 package Game;
-import People.Person;
-import Rooms.Room;
 
-        import java.util.Scanner;
+import People.Person;
+import Rooms.America;
+import Rooms.Boat;
+import Rooms.Infirmary;
+import Rooms.Room;
+import java.util.Scanner;
 
 public class Runner {
 
-
     private static boolean gameOn = true;
-
     public static void main(String[] args)
     {
-        Room[][] building = new Room[5][5];
+        Room[][] map = new Room[5][5];
+        Board board = new Board(map);
+
+        //Player//
+        Scanner in = new Scanner(System.in);
+        System.out.println("Hello! Welcome to Ellis Island!! Hope you are excited about arriving at America.  ");
+        System.out.println("What is your name?");
+        String name = in.nextLine();
+        Person player = new Person(name, 0, 0,100,0,1);
+        System.out.println("Welcome " + player.getName()+".");
+        String height = in.nextLine();
+        String width = in.nextLine();
+        System.out.println("You will travel from the boat until you get to either America or the infirmary. Good luck! ");
+        map[0][0].enterRoom(player);
 
 
         //Fill the building with normal rooms
@@ -24,26 +37,17 @@ public class Runner {
             }
         }
 
-        //Create a random winning room.
-        int x = (int)(Math.random()*building.length);
-        int y = (int)(Math.random()*building.length);
-
-        while(x!=x && y!=y) {
-            x = (int) (Math.random() * building.length);
-            y = (int) (Math.random() * building.length);
-        }
-
         //Setup player 1 and the input scanner
-        Person player1 = new Person("FirstName", "FamilyName", 0,0);
-        building[0][0].enterRoom(player1);
+        Person player = new Person("FirstName", "FamilyName", 0,0);
+        building[0][0].enterRoom(player);
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
             System.out.println("Where would you like to move? (Choose N, S, E, W)");
             String move = in.nextLine();
-            if(validMove(move, player1, building))
+            if(validMove(move, player, building))
             {
-                System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
+                System.out.println("Your coordinates: row = " + player.getxLoc() + " col = " + player.getyLoc());
 
             }
             else {
