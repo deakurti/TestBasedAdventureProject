@@ -4,6 +4,7 @@ import People.Person;
 
 
 public class Room {
+    boolean inside = false;
     Person occupant;
     int xLoc,yLoc;
 
@@ -21,7 +22,7 @@ public class Room {
         }
         else
         {
-            return "?"
+            return "?";
         }
     }
 
@@ -43,7 +44,7 @@ public class Room {
      */
     public void leaveRoom(Person x) {
         occupant = null;
-        inside = false
+        inside = false;
     }
 
 }

@@ -25,12 +25,12 @@ public class Infirmary extends Room
      */
     public void enterRoom(Person x)
     {
-        System.out.println("You enter a boat.");
+        System.out.println("You entered a infirmary because you are not doing well.");
         occupant = x;
+        inside = true;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         //add health
-
 
     }
 
@@ -53,6 +53,8 @@ public class Infirmary extends Room
     public void leaveRoom(Person x)
     {
         occupant = null;
+        inside = false;
+        super.leaveRoom(x);
     }
 
 }
