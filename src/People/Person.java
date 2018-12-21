@@ -4,6 +4,7 @@ package People;
  * Person represents the player as they move through the game.
  */
 public class Person<print> {
+    private static String[] inventory;
     String firstName;
     int xLoc, yLoc;
     public int healthlevel;
@@ -48,7 +49,7 @@ public class Person<print> {
             print += firstName + "has health of" + healthlevel;
         }
     }
-    print += "Inventory will ++ health level."
+    print += "Inventory will ++ health level.";
     int ilength = inventory.length;
 
 
