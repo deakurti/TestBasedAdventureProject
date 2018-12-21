@@ -1,11 +1,18 @@
 package Rooms;
 
 import People.Person;
+import Game.Board;
+import java.util.Scanner;
 
 
-public class Infirmary extends Room {
+
+public class Infirmary extends Room
+{
     Person occupant;
     int xLoc,yLoc;
+    private boolean inside = false;
+    private boolean dead = false;
+
 
     public Infirmary(int x, int y)
     {
@@ -29,8 +36,15 @@ public class Infirmary extends Room {
 
     @Override
     public String toString() {
-        return "Infirmary";
+        if (inside) {
+            return "[ ]";
+        } else if (dead) {
+            return "[Dead]";
+        } else {
+            return "Infirmary";
+        }
     }
+
 
     /**
      * Removes the player from the room.

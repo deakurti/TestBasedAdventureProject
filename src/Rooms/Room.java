@@ -13,6 +13,18 @@ public class Room {
         yLoc = y;
     }
 
+    public String toString()
+    {
+        if(inside)
+        {
+            return "X";
+        }
+        else
+        {
+            return "?"
+        }
+    }
+
     /**
      * Method controls the results when a person enters this room.
      * @param x the Person entering
@@ -29,9 +41,9 @@ public class Room {
      * Removes the player from the room.
      * @param x
      */
-    public void leaveRoom(Person x)
-    {
+    public void leaveRoom(Person x) {
         occupant = null;
+        inside = false
     }
 
 }
