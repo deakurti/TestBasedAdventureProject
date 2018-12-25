@@ -38,12 +38,11 @@ public class Board {
         }
         map[i][j] = new America (i,j);
 
-        public void print();
-    {
+        public void print {
             String printstr = " ";
-            for(int i = 0 ; i < map.length; i++)
+            for(int x = 0 ; i < map.length; i++)
             {
-                for(int j = 0; j<map[j].length; j++)
+                for(int y = 0; j<map[j].length; j++)
                 {
                     printstr += map[i][j];
                 }

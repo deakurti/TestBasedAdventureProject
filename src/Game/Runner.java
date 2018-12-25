@@ -36,10 +36,10 @@ public class Runner {
             }
         }
 
-        //Setup player 1 and the input scanner
-        Person player = new Person("FirstName", 0, 0,0, 0,0);
+        //Setup mainplayer and input scanner//
+        Person mainplayer = new Person("FirstName", 0, 0,0, 0,0);
         building[0][0].enterRoom(player);
-        Scanner in = new Scanner(System.in);
+        Scanner = new Scanner(System.in);
         while(gameOn)
         {
             System.out.println("Where would you like to move? (Choose N, S, E, W)");

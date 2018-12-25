@@ -1,14 +1,13 @@
 package People;
 
 /**
- * Person represents the player as they move through the game.
+ * Person represents the player
  */
 public class Person<print> {
-    private static String[] inventory;
     String firstName;
     int xLoc, yLoc;
     public int healthlevel;
-    String[] inventory = new String[3]
+    String[] inventory = new String[3];
 
 
     public int getxLoc() {
@@ -24,7 +23,9 @@ public class Person<print> {
         this.yLoc = yLoc;
     }
     public String getFirstName() {return firstName;}
-    public static String[] getInventory() { return inventory; }
+    public static String[] getInventory() {
+        return inventory;
+    }
     public int getHealthlevel() {return healthlevel;}
     public Person(String firstName, int i, int loc, int xLoc, int yLoc, int healthlevel)
     {
@@ -42,6 +43,7 @@ public class Person<print> {
         if (healthlevel>=10)
         {
             print += firstName + "has health of" + healthlevel;
+            print += "Yay!!";
         }
         else
         {
